@@ -1,0 +1,8 @@
+contract Math {
+    fn decimal_division(a: u128, b: u128) {}
+    fn decimal_subtraction(a: u128, b: u128) {}
+    fn decimal_multiplication(a: u128, b: u128) {}
+    fn reverse_decimal(a: u128, b: u128) {}
+    fn erf_plus_one(a: u128, b: u128) {}
+    fn sum_and_multiply_x() {}
+}

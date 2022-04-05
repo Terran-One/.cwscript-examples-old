@@ -1,0 +1,6 @@
+contract ShortReward {
+    instantiate() {}
+    exec() {}
+    query() {}
+    query short_reward_weight() {}
+}

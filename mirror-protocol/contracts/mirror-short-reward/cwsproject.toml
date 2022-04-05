@@ -1,0 +1,16 @@
+[project]
+name = "mirror-short-reward"
+descripton = "Example CWScript translation of Mirror short reward"
+version = "0.1.0"
+authors = "William Chen <william@terran.one>"
+readme = "README.md"
+
+[cwsc]
+output_dir = "output"
+
+[cwsc.tool.gen-docs]
+format = ["html"]
+
+[cwsc.tool.gen-client-lib]
+typescript = { npm-package = "@terran-one/mirror-short-reward" }
+python3 = { pypi-package = "mirror-short-reward" }
