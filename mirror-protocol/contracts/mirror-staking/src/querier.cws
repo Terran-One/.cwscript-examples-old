@@ -1,0 +1,5 @@
+contract Querier {
+    fn compute_premium_rate() {}
+    fn compute_short_reward_weight() {}
+    reader price() {}
+}

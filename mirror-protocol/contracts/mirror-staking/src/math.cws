@@ -1,0 +1,11 @@
+contract Math {
+    fn decimal_division(a: u128, b: u128) -> u128 {
+        // Decimal::from_ratio(DECIMAL_FRACTIONAL * a, b * DECIMAL_FRACTIONAL)
+        return TODO
+    }
+
+    fn decimal_substraction(a: u128, b: u128) -> u128 {
+        // Decimal::from_ratio((DECIMAL_FRACTIONAL * a).checked_sub(DECIMAL_FRACTIONAL * b).unwrap(),DECIMAL_FRACTIONAL,)
+        return // TODO
+    }
+}

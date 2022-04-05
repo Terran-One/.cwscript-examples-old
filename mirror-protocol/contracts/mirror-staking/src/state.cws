@@ -1,0 +1,45 @@
+contract State {
+    struct Config {
+        owner: Addr,
+        mirror_token: Addr,
+        oracle_contract: Addr,
+        terraswap_factory: Addr,
+        base_denom: String,
+        premium_min_update_interval: u64,
+        short_reward_contract: Addr
+    }
+
+    struct MigrationParams {
+        index_snapshot: u64,
+        deprecated_staking_token: Addr
+    }
+
+    struct PoolInfo {
+        staking_token: Addr,
+        pending_reward: u128, // not distributed amount due to zero bonding
+        short_pending_reward: u128, // not distributed amount due to zero bonding
+        total_bond_amount: u128,
+        total_short_amount: u128,
+        reward_index: u64,
+        short_reward_index: u64,
+        premium_rate: u64,
+        short_reward_weight: u64,
+        premium_updated_time: u64,
+        migration_params?: Option<MigrationParams>,
+    }
+
+    struct RewardInfo {
+        index: u64,
+        bond_amount: u128,
+        pending_reward: u128,
+    }
+
+    writer store_config() {}
+    reader config() {} 
+    fn store_pool_info() {}
+    fn read_pool_info() {}
+    fn rewards_store() {}
+    fn rewards_read() {}
+    fn store_is_migrated() {}
+    fn read_is_migrated() {}
+}

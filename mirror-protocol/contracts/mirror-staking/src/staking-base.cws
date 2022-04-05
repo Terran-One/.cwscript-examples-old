@@ -1,0 +1,48 @@
+import * from "./math.cws"
+import * from "./querier.cws"
+import * from "./reward.cws"
+import * from "./state.cws"
+
+contract Staking {
+    state {
+        config: Config
+    }
+
+    instantiate(
+        owner: Addr,
+        mirror_token: Addr,
+        oracle_contract: Addr,
+        terraswap_factory: Addr,
+        base_denom: String,
+        premium_min_update_interval: u64,
+        short_reward_contract: Addr
+    ) {
+        state.config = Config {
+            owner: owner
+            mirror_token: mirror_token,
+            oracle_contract: oracle_contract,
+            terraswap_factory: terraswap_factory,
+            base_denom: base_denom,
+            premium_min_update_interval: premium_min_update_interval,
+            short_reward_contract: short_reward_contract
+        }
+    }
+
+    exec() {
+
+    }
+
+    fn recieve_cw20() {}
+
+    fn update_config() {}
+
+    fn register_asset() {}
+
+    fn deprecate_staking_token() {}
+
+    query config() {}
+
+    query pool_info() {}
+
+    migrate() {}
+}

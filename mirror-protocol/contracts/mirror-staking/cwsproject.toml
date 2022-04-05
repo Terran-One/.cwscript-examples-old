@@ -1,0 +1,16 @@
+[project]
+name = "mirror-staking"
+descripton = "Example CWScript translation of Mirror staking"
+version = "0.1.0"
+authors = "William Chen <william@terran.one>"
+readme = "README.md"
+
+[cwsc]
+output_dir = "output"
+
+[cwsc.tool.gen-docs]
+format = ["html"]
+
+[cwsc.tool.gen-client-lib]
+typescript = { npm-package = "@terran-one/mirror-staking" }
+python3 = { pypi-package = "mirror-staking" }

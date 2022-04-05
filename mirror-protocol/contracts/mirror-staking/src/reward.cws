@@ -1,0 +1,7 @@
+contract Reward {
+    fn adjust_premium() {}
+    fn deposit_reward() {}
+    fn withdraw_reward() {}
+    fn before_share_change() {}
+    query reward_info() {}
+}
